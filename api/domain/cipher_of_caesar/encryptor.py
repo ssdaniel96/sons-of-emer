@@ -1,11 +1,11 @@
 def encrypt_cipher_of_caesar(text: str, key: int) -> str: 
 
-    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 '
     shifted_alphabet = alphabet[key:] + alphabet[:key]
     encrypted_text = ''
 
     for char in text:
-        lower_case_char = char.lower()
+        lower_case_char = char.upper()
         index_in_alphabet = alphabet.find(lower_case_char)
 
         if index_in_alphabet == -1:
