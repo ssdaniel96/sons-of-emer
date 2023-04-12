@@ -1,5 +1,8 @@
 def encrypt_cipher_of_caesar(text: str, key: int) -> str: 
 
+    if key < 1 or key > 26:
+        raise Exception('A chave tem que estar entre 1 e 26')
+
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 '
     shifted_alphabet = alphabet[key:] + alphabet[:key]
     encrypted_text = ''
