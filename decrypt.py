@@ -33,11 +33,11 @@ def concate(matrix: list[list]) -> str:
             message += c
     return message
     
-def decrypt(encripted_message: str, key: str, iteration = 2) -> str: 
+def decrypt_trail_fence(encripted_message: str, key: str, iteration = 2) -> str: 
     matrix = generate_matrix(encripted_message, key)
     unsorted_matrix = unsort_matrix_by_key(matrix, key)
     transposed = transpose(unsorted_matrix)
     message = concate(transposed)
     if (iteration > 1):
-        return decrypt(message, key, iteration-1)
+        return decrypt_trail_fence(message, key, iteration-1)
     return message
