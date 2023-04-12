@@ -1,4 +1,4 @@
-from encrypt import transpose
+from util import transpose
 import math
 
 encript_message = 'nscyauopttwltmdnaoiepaxttokz'
@@ -41,6 +41,3 @@ def decrypt(encripted_message: str, key: str, iteration = 2) -> str:
     if (iteration > 1):
         return decrypt(message, key, iteration-1)
     return message
-        
-decrypted = decrypt(encript_message, psswd)
-print('Mensagem descriptografada:', decrypted)

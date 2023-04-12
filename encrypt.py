@@ -1,4 +1,5 @@
 import math
+from util import transpose
 
 input_message = 'attack postponed until two am x y z'
 psswd = '4312567'
@@ -20,15 +21,6 @@ def generate_matrix(message: str, key: str) -> list[list]:
         
     return columns
 
-def transpose(matrix: list[list]) -> list[list]:
-    transposed_matrix = []
-    for line_idx in range(len(matrix[0])):
-        line_list = []
-        for column_idx in range(len(matrix)):
-            line_list.append(matrix[column_idx][line_idx])
-        transposed_matrix.append(line_list)
-    return transposed_matrix
-
 def generate_dict_matrix_by_keys(matrix: list[list], key: str):
     dict_matrix = {}
     keys = [int(x) for x in key]
@@ -42,10 +34,6 @@ def concate_dict_matrix_in_order(dict_matrix: dict) -> str:
         for c in dict_matrix[i]:
             cript_message += c
     return cript_message
-
-def print_matrix(matrix: list[list]):
-    for c in matrix:
-        print(c)
         
 def execute_trail_fence(message: str, key: str, iterations = 2) -> str:
     matrix = generate_matrix(message, key)
@@ -55,6 +43,3 @@ def execute_trail_fence(message: str, key: str, iterations = 2) -> str:
     if (iterations > 1):
         return execute_trail_fence(criptographed_message, key, iterations-1)
     return criptographed_message
-
-criptographed = execute_trail_fence(input_message, psswd)
-print('Mensagem criptografada:', criptographed)
