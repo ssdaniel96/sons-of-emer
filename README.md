@@ -1,8 +1,11 @@
 # sons-of-emer
 Maratona de programação UNASP HT 2023
 
-# HOW TO INSTALL
+# HOW TO RUN API
+
+Ir até a pasta api
 ```
-pip install fastapi
-pip install uvicorn
+docker-compose up
 ```
+
+*Precisa ter o docker instalado na sua máquina.
