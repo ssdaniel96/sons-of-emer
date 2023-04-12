@@ -18,7 +18,7 @@ pip install fastapi
 pip install uvicorn
 uvicorn api.main:app
 uvicorn api.main:app --proxy-headers --host  0.0.0.0  --port 80
-'''
+```
 
 # Rotas de exemplo
 
