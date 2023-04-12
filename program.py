@@ -30,7 +30,7 @@ def transpose(matrix: list[list]) -> list[list]:
         transposed_matrix.append(line_list)
     return transposed_matrix
 
-def generate_dict_matrix_by_key(matrix: list[list], key: str):
+def generate_dict_matrix_by_keys(matrix: list[list], key: str):
     dict_matrix = {}
     keys = [int(x) for x in key]
     for key_idx, key in enumerate(keys):
@@ -51,22 +51,11 @@ def print_matrix(matrix: list[list]):
 def execute_trail_fence(message: str, key: str, iterations = 2) -> str:
     matrix = generate_matrix(message, key)
     transposed = transpose(matrix)
-    ordered_transposed = generate_dict_matrix_by_key(transposed, key)
+    ordered_transposed = generate_dict_matrix_by_keys(transposed, key)
     criptographed_message = concate_dict_matrix_in_order(ordered_transposed)
-    if (iterations > 0):
+    if (iterations > 1):
         return execute_trail_fence(criptographed_message, key, iterations-1)
     return criptographed_message
 
 criptographed = execute_trail_fence(input_message, psswd)
 print('Mensagem criptografada:', criptographed)
-    
-# matrix = generate_matrix(input_message, psswd)
-# print_matrix(matrix)
-# print()
-# transposed = transpose(matrix)
-# print_matrix(transposed)
-# print('Aplicando chave: ', psswd)
-# ordered_transposed = generate_dict_matrix_by_key(transposed, psswd)
-# print(ordered_transposed)
-# criptographed_message = concate_dict_matrix_in_order(ordered_transposed)
-# print('Mensagem criptografada:', criptographed_message)
