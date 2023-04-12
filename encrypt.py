@@ -32,11 +32,11 @@ def concate_dict_matrix_in_order(dict_matrix: dict) -> str:
             cript_message += c
     return cript_message
         
-def execute_trail_fence(message: str, key: str, iterations = 2) -> str:
+def encrypt_trail_fence(message: str, key: str, iterations = 2) -> str:
     matrix = generate_matrix(message, key)
     transposed = transpose(matrix)
     ordered_transposed = generate_dict_matrix_by_keys(transposed, key)
     criptographed_message = concate_dict_matrix_in_order(ordered_transposed)
     if (iterations > 1):
-        return execute_trail_fence(criptographed_message, key, iterations-1)
+        return encrypt_trail_fence(criptographed_message, key, iterations-1)
     return criptographed_message
