@@ -2,7 +2,7 @@ import math
 from api.utils.util import transpose
 
 def generate_matrix(message: str, key: str):
-    input_message_formatted = message.replace(' ', '')
+    input_message_formatted = message.replace(' ', '¶')
     columns: list[list] = []
 
     width = len(key)
@@ -12,7 +12,7 @@ def generate_matrix(message: str, key: str):
         firstPosition = i*width
         lastPosition = (i+1)*width
         
-        substring = input_message_formatted[firstPosition:lastPosition].ljust(width)         
+        substring = input_message_formatted[firstPosition:lastPosition].ljust(width, '¶')         
            
         columns.append(list(substring))            
         
