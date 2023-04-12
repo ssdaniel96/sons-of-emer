@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: #b0c4de;
+  margin: 0;
+  position: relative;
+
+  &_img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 20px;
+    color: aliceblue;
+  }
+  &_title {
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+  }
+
+  &_home {
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 1400px;
+  }
+}
