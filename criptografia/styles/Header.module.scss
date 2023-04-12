@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  margin: 0;
+  position: relative;
+
+  &_title {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+  }
+
+  &_home {
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 90%;
+    text-align: center;
+  }
+}

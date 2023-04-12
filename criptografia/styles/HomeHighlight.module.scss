@@ -1,0 +1,41 @@
+.box {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 60px;
+}
+.link {
+  width: 30%;
+}
+.highlight {
+  align-items: center;
+  width: 30%;
+  height: 500px;
+  position: relative;
+  border-radius: 15px;
+  border: 2px solid #4169e1;
+  margin: 10px;
+}
+
+.img {
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #001e87;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.subtitle {
+  width: 90%;
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none ;
+}

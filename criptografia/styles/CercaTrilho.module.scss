@@ -1,0 +1,70 @@
+$primary-color: rgb(27, 218, 170);
+$text-color: rgb(255, 255, 255);
+
+.button {
+
+  background-color: $primary-color;
+  border-radius: 15px;
+  color:$text-color;
+  position: fixed;
+  margin-top: 600px;
+  margin-left: 640px;
+  width: 300px;
+  height: 70px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.box {
+  margin: 50px;
+  border-radius: 15px;
+}
+
+.iteracao {
+  margin-left: 1200px;
+  position: fixed;
+  display: inline;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+  background-color:$primary-color;
+  border-radius: 15px;
+  color: $text-color;
+  font-weight: bold;
+}
+
+.iteracaoField {
+  font-size: 40px;
+  text-align: center;
+  width: 100px;
+}
+
+.field {
+  margin-left: 490px;
+  align-items: center;
+  display: inline;
+  background-color: $primary-color;
+  width: 600px;
+  height: 500px;
+  border-radius: 15px;
+  position: fixed;
+}
+
+.fieldItem {
+  display: inline;
+  align-items: center;
+}
+
+.fieldTitle {
+  color: $text-color;
+  font-weight: bold;
+  font-size: 20px;
+  width: 200px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+.fieldContent {
+  margin-left: 220px;
+  margin-top: 20px;
+}
