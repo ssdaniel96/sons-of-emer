@@ -8,10 +8,9 @@ def generate_matrix(message: str, key: str) -> list[list]:
     columns: list[list] = []
 
     width = len(key)
-    lines = math.ceil(len(input_message_formatted)/width)
+    heigth = math.ceil(len(input_message_formatted)/width)
 
-    for i in range(lines):
-        print(i)
+    for i in range(heigth):
         firstPosition = i*width
         lastPosition = (i+1)*width
         
