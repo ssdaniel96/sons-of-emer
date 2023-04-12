@@ -3,6 +3,8 @@ from api.domain.trail_fence.encryptor import encrypt_trail_fence
 from api.domain.trail_fence.decryptor import decrypt_trail_fence
 from api.domain.cipher_of_caesar.encryptor import encrypt_cipher_of_caesar
 from api.domain.cipher_of_caesar.decryptor import decrypt_cipher_of_caesar
+from api.domain.cipher_vigenere.encrypt import encrypt_vigenere
+from api.domain.cipher_vigenere.decrypt import decrypt_vigenere
 
 app = FastAPI()
 
@@ -25,3 +27,12 @@ def get_encrypt_cipher_of_caesar(message: str, key: str):
 def get_decrypt_cipher_of_caesar(message: str, key: str):
   decrypted = decrypt_cipher_of_caesar(message, key)
   return {decrypted}
+
+@app.get("/cipher-vigenere/encrypt/{plaintext}/{key}")
+def encrypt(plaintext: str, key: str):
+  encrypted = encrypt_vigenere(plaintext, key)
+  return {encrypted}
+
+@app.get("/cipher-vigenere/decrypt/{cyphertext}/{key}")
+def decrypt(cyphertext: str, key: str):
+  decrypted = decrypt_vigenere(cyphertext, key)
