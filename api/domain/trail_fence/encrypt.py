@@ -1,7 +1,7 @@
 import math
 from api.utils.util import transpose
 
-def generate_matrix(message: str, key: str) -> list[list]:
+def generate_matrix(message: str, key: str):
     input_message_formatted = message.replace(' ', '')
     columns: list[list] = []
 
@@ -18,7 +18,7 @@ def generate_matrix(message: str, key: str) -> list[list]:
         
     return columns
 
-def generate_dict_matrix_by_keys(matrix: list[list], key: str):
+def generate_dict_matrix_by_keys(matrix, key: str):
     dict_matrix = {}
     keys = [int(x) for x in key]
     for key_idx, key in enumerate(keys):

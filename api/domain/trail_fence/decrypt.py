@@ -1,7 +1,7 @@
 from api.utils.util import transpose
 import math
 
-def generate_matrix(message: str, psswd: str) -> list[list]:
+def generate_matrix(message: str, psswd: str):
     columns: list[list] = []
     input_message_formatted = message.replace(' ', '')
     heigth = len(psswd)
@@ -16,14 +16,14 @@ def generate_matrix(message: str, psswd: str) -> list[list]:
         columns.append(list(substring))
     return columns
 
-def unsort_matrix_by_key(matrix: list[list], key: str) -> list[list]:
+def unsort_matrix_by_key(matrix, key: str):
     keys = [int(x) for x in key]
     new_matrix = []
     for key in keys:
         new_matrix.append(matrix[key-1])
     return new_matrix
 
-def concate(matrix: list[list]) -> str:
+def concate(matrix) -> str:
     message = ''
     for line in matrix:
         for c in line:
