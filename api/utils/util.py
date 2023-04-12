@@ -1,3 +1,5 @@
+space_char = ' '
+
 def transpose(matrix):
     transposed_matrix = []
     for line_idx in range(len(matrix[0])):

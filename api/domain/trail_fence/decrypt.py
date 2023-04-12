@@ -1,9 +1,9 @@
-from api.utils.util import transpose
+from api.utils.util import transpose, space_char
 import math
 
 def generate_matrix(message: str, psswd: str):
     columns: list[list] = []
-    input_message_formatted = message.replace(' ', '¶')
+    input_message_formatted = message.replace(' ', space_char)
     heigth = len(psswd)
     width = math.ceil(len(input_message_formatted)/heigth)
     
@@ -11,7 +11,7 @@ def generate_matrix(message: str, psswd: str):
         firstPosition = i*width
         lastPosition = (i+1)*width
         
-        substring = input_message_formatted[firstPosition:lastPosition].ljust(width, '¶')         
+        substring = input_message_formatted[firstPosition:lastPosition].ljust(width, space_char)         
            
         columns.append(list(substring))
     return columns
@@ -37,4 +37,4 @@ def decrypt_trail_fence(encripted_message: str, key: str, iteration = 2) -> str:
     message = concate(transposed)
     if (iteration > 1):
         return decrypt_trail_fence(message, key, iteration-1)
-    return message.replace('¶', ' ')
+    return message.replace(space_char, ' ').strip()
