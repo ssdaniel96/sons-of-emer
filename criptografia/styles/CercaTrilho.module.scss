@@ -1,0 +1,111 @@
+.box {
+  width: 80%;
+  height: 600px;
+  border-radius: 10px;
+  margin: 80px auto;
+
+  background-color: #B0E0E6	;
+}
+
+.content {
+  display: flex;
+}
+
+.fieldMessage {
+  margin: 100px;
+
+  &_title {
+    font-weight: bold;
+    color: black;
+    width: 300px;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  &_content {
+    margin-top: 30px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+.iteracao {
+  width: 130px;
+  height: 120px;
+  background-color:#4169E1		;
+  margin-top: 50px;
+  border-radius: 10px;
+
+  &_title {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  &_content {
+    margin: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+.middle {
+  margin-top: 100px;
+  margin-left: 80px;
+}
+.fieldPassword {
+
+  &_title {
+    width: 120px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+
+
+  }
+
+  &_content {
+    margin-top: 10px;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+.fieldSaida {
+  margin-top: 100px;
+  margin-left: 250px;
+
+  &_title {
+    width: 300px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &_content {
+    margin-top: 30px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+.button {
+  width: 230px;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: 530px;
+  font-size: 32px;
+  background-color:#4169E1		;
+  color: white;
+  font-weight: bold;
+
+
+}
