@@ -1,7 +1,7 @@
 from api.domain.trail_fence.decrypt import decrypt_trail_fence
 from api.domain.trail_fence.encrypt import encrypt_trail_fence
 
-frase_inicial = 'TESTANDO JUNTO COM O EMERSON'
+frase_inicial = 'Bom dia unasp'
 chave = '4312567'
 iteracoes = 2
 

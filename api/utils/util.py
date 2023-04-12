@@ -1,4 +1,4 @@
-space_char = ' '
+space_char = 'Ÿ'
 
 def transpose(matrix):
     transposed_matrix = []
