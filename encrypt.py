@@ -1,9 +1,6 @@
 import math
 from util import transpose
 
-input_message = 'attack postponed until two am x y z'
-psswd = '4312567'
-
 def generate_matrix(message: str, key: str) -> list[list]:
     input_message_formatted = message.replace(' ', '')
     columns: list[list] = []

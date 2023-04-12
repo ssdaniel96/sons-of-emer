@@ -1,9 +1,6 @@
 from util import transpose
 import math
 
-encript_message = 'nscyauopttwltmdnaoiepaxttokz'
-psswd = '4312567'
-
 def generate_matrix(message: str, psswd: str) -> list[list]:
     columns: list[list] = []
     input_message_formatted = message.replace(' ', '')
