@@ -8,7 +8,8 @@ docker-compose up
 ```
 pip install fastapi
 pip install uvicorn
-```
+
+*Precisa ter o docker instalado na sua máquina.
 
 # RUN API WITHOUT DOCKER
 
@@ -21,4 +22,3 @@ http://localhost:8000/trail-fence/decrypt/nscyauopttwltmdnaoiepaxttokz/4312567/2
 http://localhost:8000/trail-fence/encrypt/attack%20postponed%20until%20two%20am%20x%20y%20z/4312567/2
 ```
 
-*Precisa ter o docker instalado na sua máquina.
