@@ -3,8 +3,8 @@ from api.domain.trail_fence.encryptor import encrypt_trail_fence
 from api.domain.trail_fence.decryptor import decrypt_trail_fence
 from api.domain.cipher_of_caesar.encryptor import encrypt_cipher_of_caesar
 from api.domain.cipher_of_caesar.decryptor import decrypt_cipher_of_caesar
-from api.domain.cipher_vigenere.encrypt import encrypt_vigenere
-from api.domain.cipher_vigenere.decrypt import decrypt_vigenere
+from api.domain.cipher_vigenere.encryptor import encrypt_vigenere
+from api.domain.cipher_vigenere.decryptor import decrypt_vigenere
 
 app = FastAPI()
 
