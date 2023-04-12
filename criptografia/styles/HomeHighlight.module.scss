@@ -5,6 +5,7 @@
 }
 .link {
   width: 30%;
+  text-decoration: none;
 }
 .highlight {
   align-items: center;
@@ -12,15 +13,16 @@
   height: 500px;
   position: relative;
   border-radius: 15px;
-  border: 2px solid #4169e1;
+  border: 2px solid #778899;
   margin: 10px;
 }
 
 .img {
-  margin: 10px auto;
+  margin: 10px 150px;
   width: 200px;
   height: 200px;
   background-color: aqua;
+  border-radius: 10px;
 }
 
 .title {
@@ -29,13 +31,13 @@
   text-align: center;
   color: #001e87;
   font-weight: bolder;
-  text-decoration: none;
 }
 
 .subtitle {
   width: 90%;
-  margin: 10px;
+  margin: 0px;
   width: 100%;
   text-align: center;
   text-decoration: none ;
+  color: black;
 }

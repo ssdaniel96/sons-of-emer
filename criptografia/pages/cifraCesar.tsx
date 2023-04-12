@@ -1,10 +1,10 @@
 import styles from "../styles/CercaTrilho.module.scss";
 import Header from "./header";
 
-export default function cercaTrilho() {
+export default function cifraCesar() {
   return (
     <>
-      <Header content="Criptografia Cerca de Trilho"/>
+      <Header content="Criptografia Cifra de César" />
       <div className={styles.box}>
         <form action="/api/form" method="post">
           <div className={styles.content}>
@@ -23,7 +23,7 @@ export default function cercaTrilho() {
                 <div className={styles.fieldPassword_title}>Senha</div>
                 <input
                   className={styles.fieldPassword_content}
-                  type="number"
+                  type="text"
                   id="key"
                   name="key"
                   placeholder="Senha"

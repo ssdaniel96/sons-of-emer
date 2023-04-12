@@ -5,7 +5,9 @@ export default function Header(props) {
     <>
       <div className={styles.header}>
         <h1 className={styles.header_title}>{props.content}</h1>
-        <Link href="./" className={styles.header_home}>Home</Link>
+        <Link href="./" className={styles.header_home}>
+          <img className={styles.header_img} src="/casa.png" alt="Home"/>
+        </Link>
       </div>
     </>
   );
