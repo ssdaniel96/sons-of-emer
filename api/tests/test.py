@@ -1,5 +1,5 @@
-from decrypt import decrypt_trail_fence
-from encrypt import encrypt_trail_fence
+from api.domain.trail_fence.decrypt import decrypt_trail_fence
+from api.domain.trail_fence.encrypt import encrypt_trail_fence
 
 frase_inicial = 'ATTACK POSTPONED UNTIL TWO PM X Y Z'
 chave = '4312567'

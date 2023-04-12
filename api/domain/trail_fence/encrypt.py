@@ -1,5 +1,5 @@
 import math
-from app.util import transpose
+from api.utils.util import transpose
 
 def generate_matrix(message: str, key: str) -> list[list]:
     input_message_formatted = message.replace(' ', '')
