@@ -28,11 +28,12 @@ def get_decrypt_cipher_of_caesar(message: str, key: str):
   decrypted = decrypt_cipher_of_caesar(message, key)
   return {decrypted}
 
-@app.get("/cipher-vigenere/encrypt/{plaintext}/{key}")
-def encrypt(plaintext: str, key: str):
-  encrypted = encrypt_vigenere(plaintext, key)
+@app.get("/cipher-vigenere/encrypt/{message}/{key}")
+def encrypt(message: str, key: str):
+  encrypted = encrypt_vigenere(message, key)
   return {encrypted}
 
-@app.get("/cipher-vigenere/decrypt/{cyphertext}/{key}")
-def decrypt(cyphertext: str, key: str):
-  decrypted = decrypt_vigenere(cyphertext, key)
+@app.get("/cipher-vigenere/decrypt/{message}/{key}")
+def decrypt(message: str, key: str):
+  decrypted = decrypt_vigenere(message, key)
+  return {decrypted}
