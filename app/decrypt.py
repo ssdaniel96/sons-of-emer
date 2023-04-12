@@ -1,4 +1,4 @@
-from util import transpose
+from app.util import transpose
 import math
 
 def generate_matrix(message: str, psswd: str) -> list[list]:
