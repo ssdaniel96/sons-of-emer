@@ -1,0 +1,28 @@
+.box {
+  margin-top: 20px;
+  margin-left: 500px;
+  display: flex;
+}
+.image_content {
+  margin-left: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  border-radius: 100px;
+  border: 5px solid black;
+}
+
+.content {
+  width: 400px;
+  margin-left: 50px;
+  &_name {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  &_curse {
+    font-weight: bold;
+    font-size: 20px;
+    color: #778899;;
+  }
+}

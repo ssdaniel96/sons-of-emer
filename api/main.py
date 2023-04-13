@@ -33,12 +33,12 @@ def get_decrypt_trail_fence(message: str, key: str, iteration: int):
   return {'value': decrypted}
 
 @app.get("/cipher-of-caesar/encrypt/{message}/{key}")
-def get_encrypt_cipher_of_caesar(message: str, key: str):
+def get_encrypt_cipher_of_caesar(message: str, key: int):
   encrypted = encrypt_cipher_of_caesar(message, key)
   return {'value': encrypted}
 
-@app.get("/cipher-of-caesar/encrypt/{message}/{key}")
-def get_decrypt_cipher_of_caesar(message: str, key: str):
+@app.get("/cipher-of-caesar/decrypt/{message}/{key}")
+def get_decrypt_cipher_of_caesar(message: str, key: int):
   decrypted = decrypt_cipher_of_caesar(message, key)
   return {'value': decrypted}
 

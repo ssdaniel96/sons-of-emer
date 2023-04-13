@@ -1,22 +1,52 @@
 import styles from "../styles/CercaTrilho.module.scss";
 import Header from "./header";
+import axios from "axios";
+
+export function execute(event) {
+  event.preventDefault();
+  const key = event.target.key.value;
+  const message = event.target.message.value;
+  const saida = event.target.saida.value;
+  const option = event.target.option.value;
+
+  if (option == 1) {
+    axios
+      .get(`http://localhost:8000/cipher-of-caesar/encrypt/${message}/${key}`)
+      .then((data) => {
+        console.log(data)
+        const field = document.getElementById("saida");
+        field.value = data.data.value;
+        const campo = document.getElementById("message");
+        campo.value = "";
+      });
+  } else {
+    axios
+      .get(`http://localhost:8000/cipher-of-caesar/decrypt/${saida}/${key}`)
+      .then((data) => {
+        const field = document.getElementById("message");
+        field.value = data.data.value;
+        const campo = document.getElementById("saida");
+        campo.value = "";
+      });
+  }
+}
 
 export default function cifraCesar() {
   return (
     <>
       <Header content="Criptografia Cifra de César" />
       <div className={styles.box}>
-        <form action="/api/form" method="post">
+        <form onSubmit={execute} method="post">
           <div className={styles.content}>
             <div className={styles.fieldMessage}>
               <div className={styles.fieldMessage_title}>Mensagem</div>
-              <textarea
+              <input
                 className={styles.fieldMessage_content}
                 id="message"
                 name="message"
                 placeholder="Mensagem"
-                rows={5}
-              />
+                pattern="[A-Za-z0-9\d ]+"
+                title="Permitido apenas letras, números e espaços em branco"              />
             </div>
             <div className={styles.middle}>
               <div className={styles.fieldPassword}>
@@ -27,18 +57,8 @@ export default function cifraCesar() {
                   id="key"
                   name="key"
                   placeholder="Senha"
-                  maxLength={7}
-                  pattern="([0-9]{7})"
-                />
-              </div>
-              <div className={styles.iteracao}>
-                <div className={styles.iteracao_title}>Iterações</div>
-                <input
-                  className={styles.iteracao_content}
-                  type="number"
-                  min={1}
-                  id="iterations"
-                  name="iterations"
+                  pattern="[A-Za-z0-9\d ]+"
+                  title="Permitido apenas letras, números e espaços em branco"
                 />
               </div>
             </div>
@@ -53,8 +73,23 @@ export default function cifraCesar() {
               />
             </div>
           </div>
+          <fieldset className={styles.checkbox}>
+            <legend className={styles.checkbox_title}>Escolha sua opção</legend>
+            <label className={styles.checkbox_option}>Criptografar</label>
+            <input
+              type="radio"
+              id="cript-option3"
+              value="1"
+              name="option"
+              checked
+            />
+            <label className={styles.checkbox_option}>Descriptografar</label>
+            <input type="radio" id="decrypt-option3" value="2" name="option" />
+          </fieldset>
 
-          <button className={styles.button}>Criptografar</button>
+          <button type="submit" className={styles.button}>
+            Executar
+          </button>
         </form>
       </div>
     </>
