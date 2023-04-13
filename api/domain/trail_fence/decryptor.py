@@ -1,4 +1,4 @@
-from api.utils.util import transpose, space_char
+from utils.util import transpose, space_char
 import math
 
 def generate_matrix(message: str, psswd: str):

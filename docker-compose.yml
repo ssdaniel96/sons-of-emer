@@ -1,8 +1,11 @@
 version: '3.4'
 
 services:
-  trail-fence: 
-    image: trail-fence
-    build: .
-    ports: 
-      - '8000:8000'
+  back:
+    extends:
+      file: api/docker-compose.yml
+      service: backend-api
+  front:
+    extends:
+      file: criptografia/docker-compose.yml
+      service: front-app

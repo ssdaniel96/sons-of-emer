@@ -1,7 +1,8 @@
 version: '3.4'
 
 services:
-  front:
+  front-app:
+    image: front-app-img
     build: .
     ports:
       - '3000:3000'

@@ -1,5 +1,5 @@
 import math
-from api.utils.util import transpose, space_char
+from utils.util import transpose, space_char
 
 def generate_matrix(message: str, key: str):
     input_message_formatted = message.replace(' ', space_char)
