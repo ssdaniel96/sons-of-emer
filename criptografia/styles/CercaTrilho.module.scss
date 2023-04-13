@@ -1,10 +1,10 @@
 .box {
   width: 80%;
-  height: 600px;
+  height: 680px;
   border-radius: 10px;
-  margin: 80px auto;
+  margin: 50px auto;
 
-  background-color: #B0E0E6	;
+  background-color: #b0c4de;
 }
 
 .content {
@@ -28,12 +28,14 @@
     height: 200px;
     border-radius: 10px;
     text-align: center;
+    border-color: #778899;
+    border-width: 5px;
   }
 }
 .iteracao {
   width: 130px;
   height: 120px;
-  background-color:#4169E1		;
+  background-color: #778899;
   margin-top: 50px;
   border-radius: 10px;
 
@@ -43,7 +45,6 @@
     font-size: 20px;
     color: white;
     font-weight: bold;
-
   }
 
   &_content {
@@ -59,14 +60,11 @@
   margin-left: 80px;
 }
 .fieldPassword {
-
   &_title {
     width: 120px;
     text-align: center;
     font-size: 32px;
     font-weight: bold;
-
-
   }
 
   &_content {
@@ -75,6 +73,8 @@
     height: 50px;
     text-align: center;
     font-size: 20px;
+    border-color: #778899;
+    border-width: 5px;
   }
 }
 .fieldSaida {
@@ -94,6 +94,8 @@
     height: 200px;
     border-radius: 10px;
     text-align: center;
+    border-color: #778899;
+    border-width: 5px;
   }
 }
 
@@ -103,9 +105,26 @@
   border-radius: 10px;
   margin-left: 530px;
   font-size: 32px;
-  background-color:#4169E1		;
+  background-color: #778899;
   color: white;
   font-weight: bold;
+}
+
+.checkbox {
+  width: 230px;
+  margin-left: 530px;
+  margin-bottom: 40px;
+  border-color: #778899;
 
 
+  &_title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  &_option {
+    font-weight: bold;
+    width: 200px;
+    margin: 10px;
+  }
 }
