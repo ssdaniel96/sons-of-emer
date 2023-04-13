@@ -5,6 +5,7 @@ from domain.cipher_of_caesar.encryptor import encrypt_cipher_of_caesar
 from domain.cipher_of_caesar.decryptor import decrypt_cipher_of_caesar
 from domain.cipher_vigenere.encryptor import encrypt_vigenere
 from domain.cipher_vigenere.decryptor import decrypt_vigenere
+from domain.trail_fence.common import fix_key
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -24,11 +25,13 @@ app.add_middleware(
 
 @app.get("/trail-fence/encrypt/{message}/{key}/{iteration}")
 def get_encrypt_trail_fence(message: str, key: str, iteration: int):
+  key = fix_key(key[:len(key)])
   encrypted = encrypt_trail_fence(message, key, iteration)
   return {'value': encrypted}
 
 @app.get("/trail-fence/decrypt/{message}/{key}/{iteration}")
 def get_decrypt_trail_fence(message: str, key: str, iteration: int):
+  key = fix_key(key[:len(key)])
   decrypted = decrypt_trail_fence(message, key, iteration)
   return {'value': decrypted}
 
