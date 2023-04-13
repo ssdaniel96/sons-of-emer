@@ -5,6 +5,7 @@ from domain.trail_fence.common import fix_key
 def generate_matrix(message: str, key: str):
     input_message_formatted = message.replace(' ', space_char)
     columns: list[list] = []
+    key = [int(x) for x in key]
 
     width = len(key)
     heigth = math.ceil(len(input_message_formatted)/width)
@@ -34,11 +35,10 @@ def concate_dict_matrix_in_order(dict_matrix: dict) -> str:
     return cript_message
         
 def encrypt_trail_fence(message: str, key: str, iterations = 2) -> str:
-    fixed_key = fix_key(key)
-    matrix = generate_matrix(message, fixed_key)
+    matrix = generate_matrix(message, key)
     transposed = transpose(matrix)
-    ordered_transposed = generate_dict_matrix_by_keys(transposed, fixed_key)
+    ordered_transposed = generate_dict_matrix_by_keys(transposed, key)
     criptographed_message = concate_dict_matrix_in_order(ordered_transposed)
     if (iterations > 1):
-        return encrypt_trail_fence(criptographed_message, fixed_key, iterations-1)
+        return encrypt_trail_fence(criptographed_message, key, iterations-1)
     return criptographed_message
