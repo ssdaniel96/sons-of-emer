@@ -1,6 +1,6 @@
 import math
 from utils.util import transpose, space_char
-from common import fix_key
+from domain.trail_fence.common import fix_key
 
 def generate_matrix(message: str, key: str):
     input_message_formatted = message.replace(' ', space_char)

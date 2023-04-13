@@ -1,6 +1,6 @@
 from utils.util import transpose, space_char
 import math
-from common import fix_key
+from domain.trail_fence.common import fix_key
 
 
 def generate_matrix(message: str, psswd: str):
