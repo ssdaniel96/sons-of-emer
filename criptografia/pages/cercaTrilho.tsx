@@ -1,10 +1,26 @@
 import styles from "../styles/CercaTrilho.module.scss";
 import Header from "./header";
-
+import axios from "axios"
 
 export function execute(event){
-  event.prevent
+  event.preventDefault()
   const key = event.target.key.value;
+  const message = event.target.message.value
+  const itaration = event.target.iterations.value
+  const saida = event.target.saida.value
+  const option = event.target.option.value
+
+  if (option == 1){
+    axios.get(`http://localhost:8000/trail-fence/encrypt/${message}/${key}/${itaration}`).then(data => {
+      const field = document.getElementById('saida')
+      field.value = data.data.value
+    })
+  } else {
+    axios.get(`http://localhost:8000/trail-fence/decrypt/${saida}/${key}/${itaration}`).then(data => {
+      const field = document.getElementById('message')
+      field.value = data.data.value
+    })
+  }
 
 
 }
@@ -63,13 +79,13 @@ export default function cercaTrilho() {
           </div>
           <fieldset>
             <legend>Escolha sua opção</legend>
-            <labeL>Criptografar</labeL>
-            <input id='cript-option' value="1" name='option'></input>
-            <labeL>Descriptografar</labeL>
-            <input id='decrypt-option' value="2" name='option'></input>
+            <label>Criptografar</label>
+            <input type="radio" id="cript-option2" value="1" name="option" checked/>
+            <label>Descriptografar</label>
+            <input type="radio" id="decrypt-option2" value="2" name="option"/>
           </fieldset>
 
-          <button type="submit" className={styles.button}>Criptografar</button>
+          <button type="submit" className={styles.button}>Executar</button>
         </form>
       </div>
     </>

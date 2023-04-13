@@ -1,12 +1,37 @@
 import styles from "../styles/CercaTrilho.module.scss";
 import Header from "./header";
+import axios from "axios"
+
+
+export function execute(event){
+  event.preventDefault()
+  const key = event.target.key.value;
+  const message = event.target.message.value
+  const saida = event.target.saida.value
+  const option = event.target.option.value
+
+  if (option == 1){
+    axios.get(`http://localhost:8000/cipher-vigenere/encrypt/${message}/${key}`).then(data => {
+      const field = document.getElementById('saida')
+      field.value = data.data.value
+    })
+  } else {
+    axios.get(`http://localhost:8000/cipher-vigenere/decrypt/${saida}/${key}`).then(data => {
+      const field = document.getElementById('message')
+      field.value = data.data.value
+    })
+  }
+
+
+}
+
 
 export default function cifraVigenere() {
   return (
     <>
       <Header content="Criptografia Cifra de Vigenère" />
       <div className={styles.box}>
-        <form action="/api/form" method="post">
+        <form onSubmit={execute} method="post">
           <div className={styles.content}>
             <div className={styles.fieldMessage}>
               <div className={styles.fieldMessage_title}>Mensagem</div>
@@ -27,18 +52,6 @@ export default function cifraVigenere() {
                   id="key"
                   name="key"
                   placeholder="Senha"
-                  maxLength={7}
-                  pattern="([0-9]{7})"
-                />
-              </div>
-              <div className={styles.iteracao}>
-                <div className={styles.iteracao_title}>Iterações</div>
-                <input
-                  className={styles.iteracao_content}
-                  type="number"
-                  min={1}
-                  id="iterations"
-                  name="iterations"
                 />
               </div>
             </div>
@@ -53,8 +66,14 @@ export default function cifraVigenere() {
               />
             </div>
           </div>
-
-          <button className={styles.button}>Criptografar</button>
+          <fieldset>
+            <legend>Escolha sua opção</legend>
+            <label>Criptografar</label>
+            <input type="radio" id="cript-option" value="1" name="option" checked/>
+            <label>Descriptografar</label>
+            <input type="radio" id="decrypt-option" value="2" name="option"/>
+          </fieldset>
+          <button type="submit" className={styles.button}>Executar</button>
         </form>
       </div>
     </>
