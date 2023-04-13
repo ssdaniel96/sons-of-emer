@@ -1,6 +1,28 @@
 # sons-of-emer
 Maratona de programação UNASP HT 2023
 
+# EQUIPE
+9º SEMESTRE ENGENHARIA
+- Daniel da Silva Soares 
+- Daniel Feitosa
+- Emerson Monteiro
+- Richard A. R. Baldin
+
+7º SEMESTRE SISTEMAS INFORMAÇÃO
+- Erick Furtado
+
+5º SEMESTRE SISTEMAS INFORMAÇÃO
+- Eric Azevedo de Oliveira
+
+3º SEMESTRE ENGENHARIA DA COMPUTAÇÃO
+- Breno Roela
+- Nikolas Sponton
+
+1º SEMESTRE ENGENHARIA DA COMPUTAÇÃO
+- Rafael Roela
+- Lais Gonçalves de Melo
+
+
 # COMO EXECUTAR COM DOCKER
 - Na parta raiz do projeto executar o código:
 ``` 
