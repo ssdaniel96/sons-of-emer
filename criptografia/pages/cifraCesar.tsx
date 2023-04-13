@@ -46,7 +46,8 @@ export default function cifraCesar() {
                 name="message"
                 placeholder="Mensagem"
                 pattern="[A-Za-z0-9\d ]+"
-                title="Permitido apenas letras, números e espaços em branco"              />
+                title="Permitido apenas letras, números e espaços em branco"
+              />
             </div>
             <div className={styles.middle}>
               <div className={styles.fieldPassword}>
@@ -64,12 +65,11 @@ export default function cifraCesar() {
             </div>
             <div className={styles.fieldSaida}>
               <div className={styles.fieldSaida_title}>Criptografia</div>
-              <textarea
+              <input
                 className={styles.fieldSaida_content}
                 id="saida"
                 name="saida"
                 placeholder="criptografado"
-                rows={5}
               />
             </div>
           </div>
