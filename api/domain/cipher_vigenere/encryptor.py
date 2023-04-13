@@ -2,6 +2,10 @@ def encrypt_vigenere(plaintext: str, key: str) -> str:
     key = key.lower()
     ciphertext = ""
     i = 0
+
+    if len(key) >= len(plaintext): 
+        raise Exception("Erro! A Chave é maior que o texto a ser criptografado.")
+
     for char in plaintext:
         if char.isalpha():
             char_idx = ord(char.lower()) - 97

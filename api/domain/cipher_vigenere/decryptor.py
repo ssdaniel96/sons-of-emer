@@ -2,6 +2,10 @@ def decrypt_vigenere(ciphertext: str, key: str) -> str:
     key = key.lower()
     plaintext = ""
     i = 0
+
+    if len(key) >= len(ciphertext): 
+        raise Exception("Erro! A Chave é maior que o texto a ser descriptografado.")
+
     for char in ciphertext:
         if char.isalpha():
             char_idx = ord(char.lower()) - 97
