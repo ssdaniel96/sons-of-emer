@@ -1,5 +1,7 @@
 from utils.util import transpose, space_char
 import math
+from common import fix_key
+
 
 def generate_matrix(message: str, psswd: str):
     columns: list[list] = []
@@ -30,11 +32,12 @@ def concate(matrix) -> str:
             message += c
     return message
     
-def decrypt_trail_fence(encripted_message: str, key: str, iteration = 2) -> str: 
-    matrix = generate_matrix(encripted_message, key)
-    unsorted_matrix = unsort_matrix_by_key(matrix, key)
+def decrypt_trail_fence(encripted_message: str, key: str, iteration = 2) -> str:
+    fixed_key = fix_key(key) 
+    matrix = generate_matrix(encripted_message, fixed_key)
+    unsorted_matrix = unsort_matrix_by_key(matrix, fixed_key)
     transposed = transpose(unsorted_matrix)
     message = concate(transposed)
     if (iteration > 1):
-        return decrypt_trail_fence(message, key, iteration-1)
+        return decrypt_trail_fence(message, fixed_key, iteration-1)
     return message.replace(space_char, ' ').strip()
