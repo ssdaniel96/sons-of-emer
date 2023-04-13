@@ -1,12 +1,20 @@
 import styles from "../styles/CercaTrilho.module.scss";
 import Header from "./header";
 
+
+export function execute(event){
+  event.prevent
+  const key = event.target.key.value;
+
+
+}
+
 export default function cercaTrilho() {
   return (
     <>
       <Header content="Criptografia Cerca de Trilho"/>
       <div className={styles.box}>
-        <form action="/api/form" method="post">
+        <form onSubmit={execute} method="post">
           <div className={styles.content}>
             <div className={styles.fieldMessage}>
               <div className={styles.fieldMessage_title}>Mensagem</div>
@@ -53,8 +61,15 @@ export default function cercaTrilho() {
               />
             </div>
           </div>
+          <fieldset>
+            <legend>Escolha sua opção</legend>
+            <labeL>Criptografar</labeL>
+            <input id='cript-option' value="1" name='option'></input>
+            <labeL>Descriptografar</labeL>
+            <input id='decrypt-option' value="2" name='option'></input>
+          </fieldset>
 
-          <button className={styles.button}>Criptografar</button>
+          <button type="submit" className={styles.button}>Criptografar</button>
         </form>
       </div>
     </>
