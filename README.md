@@ -1,26 +1,35 @@
 # sons-of-emer
 Maratona de programação UNASP HT 2023
 
-# HOW TO RUN API
-
+# COMO EXECUTAR COM DOCKER
+- Na parta raiz do projeto executar o código:
+``` 
+docker-compose up --build
 ```
-docker-compose up
-```
-pip install fastapi
-pip install uvicorn
 
-*Precisa ter o docker instalado na sua máquina.
+# PARA RODAR SEM DOCKER 
 
-# RUN API WITHOUT DOCKER
+## Preparar ambientes
 
 ```
 pip install fastapi
 pip install uvicorn
-uvicorn api.main:app
-uvicorn api.main:app --proxy-headers --host  0.0.0.0  --port 80
 ```
 
-# Rotas de exemplo
+## Executar API
 
-http://localhost:8000/trail-fence/decrypt/nscyauopttwltmdnaoiepaxttokz/4312567/2<br>
-http://localhost:8000/trail-fence/encrypt/attack%20postponed%20until%20two%20am%20x%20y%20z/4312567/2
+Ir a pasta do projeto API e rodar
+```
+uvicorn api.main:app  --port 8000
+```
+## Executar WEB APP
+
+Ir a pasta do projeto criptografia e rodar
+```
+npm run dev
+```
+
+# DETALHES
+
+http://localhost:3000 -> rota da aplicação WEB
+http://localhost:8000 -> rota da API
