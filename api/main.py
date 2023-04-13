@@ -37,7 +37,7 @@ def get_encrypt_cipher_of_caesar(message: str, key: str):
   encrypted = encrypt_cipher_of_caesar(message, key)
   return {'value': encrypted}
 
-@app.get("/cipher-of-caesar/encrypt/{message}/{key}")
+@app.get("/cipher-of-caesar/decrypt/{message}/{key}")
 def get_decrypt_cipher_of_caesar(message: str, key: str):
   decrypted = decrypt_cipher_of_caesar(message, key)
   return {'value': decrypted}
