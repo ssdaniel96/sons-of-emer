@@ -1,5 +1,8 @@
 def encrypt_cipher_of_caesar(text: str, key: int) -> str: 
 
+    if type(key) != int:
+        raise Exception('A chave tem que ser um numero')
+    
     if key < 1 or key > 26:
         raise Exception('A chave tem que estar entre 1 e 26')
 
