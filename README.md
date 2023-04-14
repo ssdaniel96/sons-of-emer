@@ -23,12 +23,12 @@ Realizar a implementação de três algoritmos de criptografia
 # TECNOLOGIAS UTILIZADAS
 - back-end: python com biblioteca do fastapi para criação da minimal api
 - front-end: nextjs para as telas e interação com usuários
-- - Devido a falta de conhecimento que o grupo tinha com o nextjs, acabamos utilizando a biblioteca a `axios` para a integração com a api
+-- Devido a falta de conhecimento que o grupo tinha com o nextjs, acabamos utilizando a biblioteca a `axios` para a integração com a api
 - infra: 
-- - docker
-- - - criação de containers para rodar a aplicação
-- - docker-compose
-- - - para orquestração dos containers
+  - docker
+    - criação de containers para rodar a aplicação
+  - docker-compose
+    - para orquestração dos containers
 - versionamento: git, mas sem controle de versão, apenas repositório que pode acompanhar a criação através do histórico de commits.
 
 # EQUIPE 03
@@ -75,6 +75,8 @@ docker-compose up --build
 
 ## Preparar ambientes
 
+Executar no terminal 
+
 ```
 pip install fastapi
 ```
@@ -102,7 +104,7 @@ npm run dev
 
 
 # DETALHES
-Após inicializado apenas ir ao navegador e colocar na url `http://localhost:3000/`, após isso já pode utilziar as soluções.
+Após inicializado c/ qualquer dos métodos acima, acessar a url `http://localhost:3000/`
 
 
 http://localhost:3000 -> rota da aplicação WEB
