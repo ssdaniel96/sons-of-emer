@@ -23,9 +23,6 @@ Data de finalização: Quinta-feira, 13 de Abril de 2023
 - - - para orquestração dos containers
 - versionamento: git, mas sem controle de versão, apenas repositório que pode acompanhar a criação através do histórico de commits.
 
-# ISSUES JÁ CONHECIDAS
-- A API não está preprada para responder caso o problema ocorra devida a uma chave invalida contendo 2 dígitos iguais no caso da trilha de cerca.
-
 # EQUIPE 03
 
 9º SEMESTRE ENGENHARIA DA COMPUTAÇÃO
