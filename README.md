@@ -12,6 +12,14 @@ Data de criação: Terça-feira, 11 de Abril de 2023
 
 Data de finalização: Quinta-feira, 13 de Abril de 2023
 
+# PROPOSTA
+
+Realizar a implementação de três algoritmos de criptografia
+
+- Cifra de Cesar
+- Cifra de Venegere
+- Cerca da Trilha
+
 # TECNOLOGIAS UTILIZADAS
 - back-end: python com biblioteca do fastapi para criação da minimal api
 - front-end: nextjs para as telas e interação com usuários
