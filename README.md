@@ -58,7 +58,9 @@ Realizar a implementação de três algoritmos de criptografia
 - Rafael Roela
 - Lais Gonçalves de Melo
 
-# COMO EXECUTAR COM DOCKER
+# PARA EXECUTAR COM DOCKER
+
+- Necessário ter o docker instalado em sua máquina c/ WSL habilitado
 
 - Na parta raiz do projeto executar o código:
 
@@ -66,7 +68,10 @@ Realizar a implementação de três algoritmos de criptografia
 docker-compose up --build
 ```
 
-# PARA RODAR SEM DOCKER
+# PARA EXECUTAR SEM DOCKER
+
+- Necessário ter node instalado na máquina (recomendado v. 16+)
+- Necessário ter python 3.x instalado na máquina.
 
 ## Preparar ambientes
 
@@ -95,7 +100,11 @@ npm install
 npm run dev
 ```
 
+
 # DETALHES
+Após inicializado apenas ir ao navegador e colocar na url `http://localhost:3000/`, após isso já pode utilziar as soluções.
+
 
 http://localhost:3000 -> rota da aplicação WEB
+
 http://localhost:8000 -> rota da API
